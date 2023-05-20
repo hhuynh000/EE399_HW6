@@ -45,7 +45,7 @@ For all training, the parameters is used:
 Using the parameters of number of sensors = 3, lags = 52 and noise = 0, the model after training has a mean square error of 0.01979 between the truth and reconstructed weekly mean sea-surface temperature. One of the sampled reconstructed output compared with the ground truth is shown in the figure below.
 
 <p align="center">
-  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/recon.png" width="500"/>
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/recons.png" width="500"/>
 </p>
 <p align="center">
   Figure 3. Ground Truth vs. Reconstruction
@@ -55,7 +55,7 @@ Using the parameters of number of sensors = 3, lags = 52 and noise = 0, the mode
 Using the fixed parameters of number of sensors = 3, noise = 0, while varying the time lags by 13, 26, 39, 52 representing the first, second, third and fourth quarter of the year respectively. The plot of the mean square error as a function of time lags is shown in the figure below.
 
 <p align="center">
-  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/lag.png" width="500"/>
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/lags.png" width="500"/>
 </p>
 <p align="center">
   Figure 4. MSE vs. Time Lags
@@ -75,8 +75,10 @@ Using the fixed parameters of number of sensors = 3, lags = 52, while varying th
 Using the fixed parameters of number of sensors = 3, lags = 52, while varying the noise by 0, 0.25, 0.5, 0.75 and 1. The plot of the mean square error as a function of Gaussian noise is shown in the figure below.
 
 <p align="center">
-  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/gaussian.png" width="500"/>
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/sensors.png" width="500"/>
 </p>
 <p align="center">
-  Figure 5. MSE vs. Gaussian Noise
+  Figure 6. MSE vs. Gaussian Noise
 </p>
+
+## Conclusion
