@@ -52,7 +52,7 @@ Using the parameters of number of sensors = 3, lags = 52 and noise = 0, the mode
 </p>
 
 ### Time lags test
-Using the fixed parameters of number of sensors = 3, noise = 0, while varying the time lags by 13, 26, 39, 52 representing the first, second, third and fourth quarter of the year respectively. The plot of the mean square error as a function of time lags is shown in the figure below.
+Using the fixed parameters of number of sensors = 3, noise = 0, while varying the time lags by 13, 26, 39, 52 representing up to the first quarter, second quarter, third quarter and entire year respectively. The plot of the mean square error as a function of time lags is shown in the figure below.
 
 <p align="center">
   <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/lags.png" width="500"/>
@@ -82,3 +82,4 @@ Using the fixed parameters of number of sensors = 3, lags = 52, while varying th
 </p>
 
 ## Conclusion
+The SHRED model perform great in reconstruction of the weekly mean sea-surface temperature from just a few random sensor locations. As seen from the number of sensors test, there is little in mean square error when using 3, 5, 7 or 10 sensors. The average mean square error is around 0.0198 for varying number of sensors. As for the time lags, it appears that there is no significant different, but there is a slight trend of the greater the trajectory length the smaller the mean square error. This trend might signifies that capturing the entire year data give the overall seaonal changes help the model to make a better prediction. However, when noise is added to the data the mean square error significantly increase linearly. Noisy data can drastically decreases the model prediction performance, although training for more epochs or using a filter can help with this issue.
