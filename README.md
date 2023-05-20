@@ -18,3 +18,65 @@ where $\mathcal F$ is a feed forward network parameterized by weights $W_{SD}$, 
 
 ## Implementation
 The SHRED model used is from this Github [repository](https://github.com/Jan-Williams/pyshred) by Jan P. Williams, Olivia Zahn, and J. Nathan Kutz. There are some modifications to the original repository in order to add some visualization to the output and loading the full SST data based on a [fork](https://github.com/shervinsahba/pyshred) by Shervinsahba. The summary of the SHRED network is shown in the figure below.
+
+<p align="center">
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/SHRED.png" width="500"/>
+</p>
+<p align="center">
+  Figure 1. SHRED Model Architecture
+</p>
+
+In addition, a Gaussian noise with a mean of 0 and standard deviation of 1 parameter is added to the data pre-proccessing for the SHRED model. The code implementation is shown in the figure below.
+
+<p align="center">
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/Noise.png" width="500"/>
+</p>
+<p align="center">
+  Figure 2. Gaussian Noise Implementation
+</p>
+
+For all training, the parameters is used:
+  - Batch size = 64
+  - Number of epochs = 1000
+  - Learning rate = 0.003
+
+## Results
+### Base test
+Using the parameters of number of sensors = 3, lags = 52 and noise = 0, the model after training has a mean square error of 0.01979 between the truth and reconstructed weekly mean sea-surface temperature. One of the sampled reconstructed output compared with the ground truth is shown in the figure below.
+
+<p align="center">
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/recon.png" width="500"/>
+</p>
+<p align="center">
+  Figure 3. Ground Truth vs. Reconstruction
+</p>
+
+### Time lags test
+Using the fixed parameters of number of sensors = 3, noise = 0, while varying the time lags by 13, 26, 39, 52 representing the first, second, third and fourth quarter of the year respectively. The plot of the mean square error as a function of time lags is shown in the figure below.
+
+<p align="center">
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/lag.png" width="500"/>
+</p>
+<p align="center">
+  Figure 4. MSE vs. Time Lags
+</p>
+
+### Gaussian noise test
+Using the fixed parameters of number of sensors = 3, lags = 52, while varying the noise by 0, 0.25, 0.5, 0.75 and 1. The plot of the mean square error as a function of Gaussian noise is shown in the figure below.
+
+<p align="center">
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/gaussian.png" width="500"/>
+</p>
+<p align="center">
+  Figure 5. MSE vs. Gaussian Noise
+</p>
+
+### Gaussian noise test
+Using the fixed parameters of number of sensors = 3, lags = 52, while varying the noise by 0, 0.25, 0.5, 0.75 and 1. The plot of the mean square error as a function of Gaussian noise is shown in the figure below.
+
+<p align="center">
+  <img src="https://github.com/hhuynh000/EE399_HW6/blob/main/resources/gaussian.png" width="500"/>
+</p>
+<p align="center">
+  Figure 5. MSE vs. Gaussian Noise
+</p>
